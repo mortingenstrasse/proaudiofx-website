@@ -696,56 +696,123 @@ footer ul li a:hover { color: var(--white); }
 
 /* ─── Ad Notice (Step 1 bottom) ─────────────────────────────────────────── */
 .ad-notice {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
   background: #fffbf0;
   border: 2px solid #f5a623;
-  border-radius: 16px;
-  padding: 28px 32px;
+  border-radius: 18px;
+  padding: 32px;
   margin: 40px 0 0;
-}
-.ad-notice-icon {
-  font-size: 36px;
-  flex-shrink: 0;
-  line-height: 1;
-  margin-top: 4px;
-}
-.ad-notice-text {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+}
+.ad-notice-header {
+  display: flex;
+  align-items: flex-start;
   gap: 16px;
 }
+.ad-notice-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
 .ad-notice-en {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.75;
   color: #1d1d1f;
-  margin: 0;
+  margin: 0 0 12px;
 }
 .ad-notice-en strong {
-  font-size: 20px;
+  font-size: 18px;
   color: #c8720a;
   display: block;
-  margin: 4px 0;
+  margin-bottom: 6px;
 }
 .ad-notice-ja {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.9;
-  color: #444;
+  color: #555;
   border-top: 1px solid #f0d9a0;
-  padding-top: 14px;
+  padding-top: 12px;
   margin: 0;
 }
 .ad-notice-ja strong {
-  font-size: 17px;
+  font-size: 15px;
   color: #c8720a;
   display: block;
-  margin: 4px 0;
+  margin-bottom: 4px;
+}
+.ad-notice-types {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 20px;
+  background: rgba(245,166,35,.08);
+  border-radius: 10px;
+}
+.ad-notice-type {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #3a3a3a;
+  line-height: 1.6;
+}
+.ad-type-dot {
+  width: 8px;
+  height: 8px;
+  background: #f5a623;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+.ad-notice-sample {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ad-sample-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 0;
+}
+.ad-notice-sample img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  border: 1px solid #e8d5a0;
+  display: block;
+}
+.ad-notice-cta {
+  background: #fff8ec;
+  border: 1.5px solid #f5a623;
+  border-radius: 10px;
+  padding: 18px 22px;
+}
+.ad-notice-cta .ad-notice-en {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.ad-notice-cta .ad-notice-en strong {
+  font-size: 16px;
+  display: inline;
+}
+.ad-notice-cta .ad-notice-ja {
+  border-top: 1px solid #f0d9a0;
+  padding-top: 10px;
+  font-size: 13px;
+}
+.ad-notice-cta .ad-notice-ja strong {
+  display: inline;
+  font-size: 14px;
 }
 @media (max-width: 540px) {
-  .ad-notice { flex-direction: column; gap: 12px; padding: 22px 20px; }
-  .ad-notice-en { font-size: 15px; }
-  .ad-notice-en strong { font-size: 17px; }
+  .ad-notice { padding: 22px 18px; gap: 18px; }
+  .ad-notice-header { gap: 12px; }
+  .ad-notice-en { font-size: 14px; }
 }
 
 /* ─── Direct Link Ad Block ──────────────────────────────────────────────── */
