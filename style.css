@@ -694,6 +694,60 @@ footer ul li a:hover { color: var(--white); }
   transform: translate(-50%, -50%) scale(1.1);
 }
 
+/* ─── Ad Notice (Step 1 bottom) ─────────────────────────────────────────── */
+.ad-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #fffbf0;
+  border: 2px solid #f5a623;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin: 40px 0 0;
+}
+.ad-notice-icon {
+  font-size: 36px;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 4px;
+}
+.ad-notice-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ad-notice-en {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #1d1d1f;
+  margin: 0;
+}
+.ad-notice-en strong {
+  font-size: 20px;
+  color: #c8720a;
+  display: block;
+  margin: 4px 0;
+}
+.ad-notice-ja {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #444;
+  border-top: 1px solid #f0d9a0;
+  padding-top: 14px;
+  margin: 0;
+}
+.ad-notice-ja strong {
+  font-size: 17px;
+  color: #c8720a;
+  display: block;
+  margin: 4px 0;
+}
+@media (max-width: 540px) {
+  .ad-notice { flex-direction: column; gap: 12px; padding: 22px 20px; }
+  .ad-notice-en { font-size: 15px; }
+  .ad-notice-en strong { font-size: 17px; }
+}
+
 /* ─── Ad Blocker Overlay ────────────────────────────────────────────────── */
 #adblock-overlay {
   position: fixed;
