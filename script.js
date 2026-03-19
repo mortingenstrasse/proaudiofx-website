@@ -1,3 +1,31 @@
+// ─── Ad Blocker Detection ───────────────────────────────────────────────────
+function checkAdBlocker() {
+  const bait = document.getElementById('adblock-bait');
+  if (!bait) return; // not on download page
+
+  // Give the ad blocker time to act on the bait element
+  setTimeout(() => {
+    const blocked =
+      !bait ||
+      bait.offsetHeight === 0 ||
+      bait.offsetWidth === 0 ||
+      bait.style.display === 'none' ||
+      bait.style.visibility === 'hidden' ||
+      window.getComputedStyle(bait).display === 'none' ||
+      window.getComputedStyle(bait).visibility === 'hidden';
+
+    if (blocked) {
+      const overlay = document.getElementById('adblock-overlay');
+      if (overlay) overlay.style.display = 'flex';
+    }
+  }, 300);
+}
+
+function closeAdblockOverlay() {
+  const overlay = document.getElementById('adblock-overlay');
+  if (overlay) overlay.style.display = 'none';
+}
+
 // ─── Language Switcher ──────────────────────────────────────────────────────
 const currentLang = { value: 'en' };
 
@@ -31,6 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => applyLang(btn.dataset.lang));
   });
+
+  // Check ad blocker on download page
+  checkAdBlocker();
 });
 
 // ─── Step Wizard (download.html) ────────────────────────────────────────────

@@ -15,6 +15,62 @@
 </head>
 <body>
 
+<!-- Ad blocker bait — ad blockers hide this, we detect it -->
+<div id="adblock-bait"
+     class="ad ads adsbox doubleclick ad-placement"
+     style="height:1px;width:1px;position:absolute;left:-9999px;opacity:0;pointer-events:none;">
+</div>
+
+<!-- Ad blocker overlay -->
+<div id="adblock-overlay" style="display:none;">
+  <div class="adblock-box">
+    <div class="adblock-icon">🙏</div>
+    <h2 data-en="Please disable your ad blocker"
+        data-ja="広告ブロッカーを無効にしてください">
+      Please disable your ad blocker
+    </h2>
+    <p data-en="Our plugins are completely free. To keep developing new tools, we rely on ad revenue. Please whitelist this site and reload the page."
+       data-ja="プラグインは完全無料です。開発を続けるために広告収入が必要です。このサイトをホワイトリストに追加してページを再読み込みしてください。">
+      Our plugins are completely free. To keep developing new tools, we rely on ad revenue.<br>
+      Please whitelist this site and reload the page.
+    </p>
+    <div class="adblock-steps">
+      <div class="adblock-step">
+        <span class="adblock-num">1</span>
+        <span data-en="Click your ad blocker icon in the browser toolbar"
+              data-ja="ブラウザのツールバーにある広告ブロッカーアイコンをクリック">
+          Click your ad blocker icon in the browser toolbar
+        </span>
+      </div>
+      <div class="adblock-step">
+        <span class="adblock-num">2</span>
+        <span data-en="Select &ldquo;Disable on this site&rdquo; or &ldquo;Whitelist&rdquo;"
+              data-ja="「このサイトで無効にする」または「ホワイトリスト」を選択">
+          Select &ldquo;Disable on this site&rdquo; or &ldquo;Whitelist&rdquo;
+        </span>
+      </div>
+      <div class="adblock-step">
+        <span class="adblock-num">3</span>
+        <span data-en="Reload the page"
+              data-ja="ページを再読み込みする">
+          Reload the page
+        </span>
+      </div>
+    </div>
+    <button class="btn-reload" onclick="window.location.reload()"
+            data-en="I've disabled it — Reload"
+            data-ja="無効にしました — 再読み込み">
+      I've disabled it — Reload
+    </button>
+    <p class="adblock-skip"
+       data-en="If you prefer not to, you can still <a href='#' onclick='closeAdblockOverlay()'>continue without ads</a>."
+       data-ja="広告なしで<a href='#' onclick='closeAdblockOverlay()'>続行する</a>こともできます。">
+      If you prefer not to, you can still
+      <a href="#" onclick="closeAdblockOverlay()">continue without ads</a>.
+    </p>
+  </div>
+</div>
+
 <!-- ─── Header ──────────────────────────────────────────────────────────── -->
 <header>
   <div class="header-inner">
